@@ -33,4 +33,5 @@ Route::get('/campanias/excel', 'CampaniasController@actionExcel');
 Route::get('/campanias/subirexcel', 'CampaniasController@actionSubirExcel');
 
 
+
 Route::get('participantes', 'ParticipantesController@actionClicAcepta');

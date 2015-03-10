@@ -36,4 +36,4 @@
   <![endif]-->
 </head>
 
-<body class="sticky-header">
+<body class="sticky-header left-side-collapsed">

@@ -7,7 +7,7 @@
         </div>
 
         <div class="logo-icon text-center">
-            <a href="index.html"><img alt="" src="{{ url('images/logo_icon.png') }}"></a>
+            <a href="/promos/public/campanias"><img alt="" src="{{ url('images/logo_icon.png') }}"></a>
         </div>
         <!--logo and iconic logo end-->
 
@@ -33,7 +33,7 @@
 
             <!--sidebar nav start-->
             <ul class="nav nav-pills nav-stacked custom-nav">
-                <li class="active"><a href="/promos/public/campanias"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                <li class="active"><a href="/promos/public/campanias"><i class="fa fa-home"></i> <span>Escritorio</span></a></li>
                 <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>Layouts</span></a>
                     <ul class="sub-menu-list">
                         <li><a href="blank_page.html"> Blank Page</a></li>

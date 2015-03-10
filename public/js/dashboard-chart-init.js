@@ -2,10 +2,8 @@
 Morris.Donut({
     element: 'graph-donut',
     data: [
-        {value: 40, label: 'New Visit', formatted: 'at least 70%' },
-        {value: 30, label: 'Unique Visits', formatted: 'approx. 15%' },
-        {value: 20, label: 'Bounce Rate', formatted: 'approx. 10%' },
-        {value: 10, label: 'Up Time', formatted: 'at most 99.99%' }
+        {value: 20, label: 'New Visit', formatted: 'at least 70%' },
+        {value: 80, label: 'Unique Visits', formatted: 'approx. 15%' },
     ],
     backgroundColor: false,
     labelColor: '#fff',

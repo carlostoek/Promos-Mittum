@@ -6,8 +6,9 @@ class CampaniasController extends \BaseController {
 	public function actionVerCampanias()
 	{	
 		$campanias = Campania::all();
-		$totCampanias = $campanias->count();
-		return View::make('campanias/index', compact('campanias', 'totCampanias'));
+		$participantes = Participante::all();
+		$participantesOk = Participante::where('click', 1)->count();
+		return View::make('campanias/index', compact('campanias', 'participantes', 'participantesOk'));
 	}
 
 	// Mostramos detalles de campaña según ID
