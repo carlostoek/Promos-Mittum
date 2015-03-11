@@ -1,9 +1,9 @@
-// Use Morris.Area instead of Morris.Line
+/*// Use Morris.Area instead of Morris.Line
 Morris.Donut({
     element: 'graph-donut',
     data: [
-        {value: 20, label: 'New Visit', formatted: 'at least 70%' },
-        {value: 80, label: 'Unique Visits', formatted: 'approx. 15%' },
+        {"value":20,"label":"Visit","formatted":"20%"},
+        {"value":80,"label":"Visit","formatted":"80%"},
     ],
     backgroundColor: false,
     labelColor: '#fff',
@@ -11,7 +11,7 @@ Morris.Donut({
         '#4acacb','#6a8bc0','#5ab6df','#fe8676'
     ],
     formatter: function (x, data) { return data.formatted; }
-});
+});*/
 
 
 $(function() {

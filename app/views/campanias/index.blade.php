@@ -1,6 +1,10 @@
 @extends ('layout.general')
 @section ('content')
-
+<script>
+var data = JSON.parse('{{ $datos }}');
+var uno = data.valor1;
+var dos = data.valor2;
+</script>
   	<div class="page-heading">
     	<h3>Escritorio</h3>
 	    <ul class="breadcrumb">
@@ -78,10 +82,8 @@
                         </div>
                         <div class="col-md-5 col-sm-5 col-xs-5">
                             <ul class="bar-legend">
-                                <li><span class="blue"></span> Open rate</li>
-                                <li><span class="green"></span> Click rate</li>
-                                <li><span class="purple"></span> Share rate</li>
-                                <li><span class="red"></span> Unsubscribed rate</li>
+                                <li><span class="green"></span> Usuarios sin ganar</li>
+                                <li><span class="purple"></span> Ganadores</li>
                             </ul>
                         </div>
                     </div>

@@ -30,8 +30,7 @@ Route::post('/campanias/procesar', 'CampaniasController@actionProcesarArchivo');
 
 // Para pruebas
 Route::get('/campanias/excel', 'CampaniasController@actionExcel');
-Route::get('/campanias/subirexcel', 'CampaniasController@actionSubirExcel');
-
+Route::get('/campanias/charts', 'CampaniasController@actionCharts');
 
 
 Route::get('participantes', 'ParticipantesController@actionClicAcepta');

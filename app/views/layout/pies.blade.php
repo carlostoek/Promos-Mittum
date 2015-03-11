@@ -40,7 +40,7 @@
 {{ HTML::script('js/scripts.js') }}
 
 <!--Dashboard Charts-->
-{{ HTML::script('js/dashboard-chart-init.js') }}
+{{ HTML::script('js/chart-init.js') }}
 
 
 </body>
