@@ -8,7 +8,9 @@ class CampaniasController extends \BaseController {
 		$campanias = Campania::all();
 		$participantes = Participante::all();
 		$participantesOk = Participante::where('click', 1)->count();
-		return View::make('campanias/index', compact('campanias', 'participantes', 'participantesOk'));
+		// Aquí pasar los datos para el pay
+		$datos = json_encode(array('valor1' => '80', 'valor2' => '20', 'formatted1' => '80%', 'formatted2' => '20%'));
+		return View::make('campanias/index', compact('campanias', 'participantes', 'participantesOk', 'datos'));
 	}
 
 	// Mostramos detalles de campaña según ID
@@ -143,6 +145,23 @@ class CampaniasController extends \BaseController {
 	public function actionSubirExcel()
 	{
 		return View::make('campanias/subir');
+	}
+
+	public function actionCharts()
+	{
+		/*$datos = array(
+			'Uno'=>'hola',
+			'Dos'=>'como',
+			'Tres'=>'estas',
+			'Cuatro'=>'tu'
+			);*/
+		$hola = '20';
+		// $datos = $campania = Campania::first();
+		$datos = json_encode(array('valor1' => '80', 'valor2' => $hola, 'formatted1' => '80%', 'formatted2' => '20%'));
+		/*$algo = 20;*/
+		// return $datos;
+		return View::make('campanias/charts', compact('datos', 'hola'));
+		 // return var_dump(json_decode($datos, true));
 	}
 
 }
