@@ -15,9 +15,11 @@
 {{ HTML::script('js/iCheck/jquery.icheck.js') }}
 {{ HTML::script('js/icheck-init.js') }}
 
-<!--dynamic table-->
+<!-- dynamic table -->
 <script type="text/javascript" language="javascript" src="js/advanced-datatable/js/jquery.dataTables.js"></script>
 <script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
+<!--Español para dynamic table-->
+
 <!--dynamic table initialization -->
 <script src="js/dynamic_table_init.js"></script>
 

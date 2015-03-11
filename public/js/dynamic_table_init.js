@@ -1,20 +1,15 @@
 function fnFormatDetails ( oTable, nTr )
 {
     var aData = oTable.fnGetData( nTr );
-    var sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
-    sOut += '<tr><td>Rendering engine:</td><td>'+aData[1]+' '+aData[4]+'</td></tr>';
-    sOut += '<tr><td>Link to source:</td><td>Could provide a link here</td></tr>';
-    sOut += '<tr><td>Extra info:</td><td>And any further details here (images etc)</td></tr>';
+    var sOut = '<table cellpadding="4" cellspacing="0" border="0" style="padding-left:50px;">';
+    sOut += '<tr><td>Nombre de campaña:</td><td>'+aData[1]+' </td></tr>';
+    sOut += '<tr><td>Límite de ganadores:</td><td>'+aData[3]+'</td></tr>';
     sOut += '</table>';
 
     return sOut;
 }
 
 $(document).ready(function() {
-
-    $('#dynamic-table').dataTable( {
-        "aaSorting": [[ 4, "desc" ]]
-    } );
 
     /*
      * Insert a 'details' column to the table
@@ -39,7 +34,7 @@ $(document).ready(function() {
         "aoColumnDefs": [
             { "bSortable": false, "aTargets": [ 0 ] }
         ],
-        "aaSorting": [[1, 'asc']]
+        "aaSorting": [[1, 'asc']],
     });
 
     /* Add event listener for opening and closing details

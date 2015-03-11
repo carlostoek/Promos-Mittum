@@ -27,10 +27,7 @@
   {{ HTML::style('css/style-responsive.css') }}
 
   <!--dynamic table-->
-  <link href="js/advanced-datatable/css/demo_page.css" rel="stylesheet" />
-  <link href="js/advanced-datatable/css/demo_table.css" rel="stylesheet" />
-  <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css" />
-
+  {{ HTML::style('js/advanced-datatable/css/table.css') }}
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
