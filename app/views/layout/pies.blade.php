@@ -11,30 +11,19 @@
 {{ HTML::script('js/easypiechart/jquery.easypiechart.js') }}
 {{ HTML::script('js/easypiechart/easypiechart-init.js') }}
 
-<!--Sparkline Chart-->
-{{ HTML::script('js/sparkline/jquery.sparkline.js') }}
-{{ HTML::script('js/sparkline/sparkline-init.js') }}
-
 <!--icheck -->
 {{ HTML::script('js/iCheck/jquery.icheck.js') }}
 {{ HTML::script('js/icheck-init.js') }}
 
-
-<!-- jQuery Flot Chart-->
-{{ HTML::script('js/flot-chart/jquery.flot.js') }}
-{{ HTML::script('js/flot-chart/jquery.flot.tooltip.js') }}
-{{ HTML::script('js/flot-chart/jquery.flot.resize.js') }}
-
+<!--dynamic table-->
+<script type="text/javascript" language="javascript" src="js/advanced-datatable/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
+<!--dynamic table initialization -->
+<script src="js/dynamic_table_init.js"></script>
 
 <!--Morris Chart-->
 {{ HTML::script('js/morris-chart/morris.js') }}
 {{ HTML::script('js/morris-chart/raphael-min.js') }}
-
-<!--Calendar-->
-{{ HTML::script('js/calendar/clndr.js') }}
-{{ HTML::script('js/calendar/evnt.calendar.init.js') }}
-{{ HTML::script('js/calendar/moment-2.2.1.js') }}
-{{ HTML::script('http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js') }}
 
 <!--common scripts for all pages-->
 {{ HTML::script('js/scripts.js') }}

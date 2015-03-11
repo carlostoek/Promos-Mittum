@@ -5,12 +5,22 @@ class CampaniasController extends \BaseController {
 	// Mostramos campañas index
 	public function actionVerCampanias()
 	{	
+		// Tomamos todas las campañas
 		$campanias = Campania::all();
+		// Tomamos todos los participantes
 		$participantes = Participante::all();
+		// Capturamos sólo los que ya dieron clic
 		$participantesOk = Participante::where('click', 1)->count();
-		// Aquí pasar los datos para el pay
-		$datos = json_encode(array('valor1' => '80', 'valor2' => '20', 'formatted1' => '80%', 'formatted2' => '20%'));
-		return View::make('campanias/index', compact('campanias', 'participantes', 'participantesOk', 'datos'));
+		// Sumamos los posibles ganadores
+		$sumaPosibles = Campania::select('limite',
+      \DB::raw('SUM(limite) as limite'))
+      ->first();
+		// Aquí pasar los datos para el pay round($participantesOk / $sumaPosibles->limite, 2);
+    $valor1 = round($participantesOk * 100 / $sumaPosibles->limite);
+    $valor2 = round($participantesOk * 100 / $participantes->count());
+		$datos = json_encode(array('valor1' => $valor1, 'valor2' => $valor2, 'formatted1' => $valor1.'%', 'formatted2' => $valor2.'%'));
+		// Llamamos vista y pasamos variables
+		return View::make('campanias/index', compact('campanias', 'participantes', 'participantesOk', 'datos', 'sumaPosibles', 'valor2'));
 	}
 
 	// Mostramos detalles de campaña según ID
@@ -142,11 +152,6 @@ class CampaniasController extends \BaseController {
 	*/
 
 	// Mostrar subir archivos
-	public function actionSubirExcel()
-	{
-		return View::make('campanias/subir');
-	}
-
 	public function actionCharts()
 	{
 		/*$datos = array(
@@ -164,4 +169,11 @@ class CampaniasController extends \BaseController {
 		 // return var_dump(json_decode($datos, true));
 	}
 
+	public function actionSuma()
+	{
+		$suma = Campania::select('limite',
+      \DB::raw('SUM(limite) as limite'))
+      ->first();
+    return $suma->limite;
+	}
 }

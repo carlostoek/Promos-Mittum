@@ -17,6 +17,7 @@
 });
 */
 
+//Rutas de campañas 
 Route::get('/campanias/', 'CampaniasController@actionVerCampanias');
 Route::get('/campanias/crear', 'CampaniasController@actionCrear');
 Route::post('/campanias/crear', 'CampaniasController@actionCrearCampania');
@@ -27,10 +28,11 @@ Route::delete('/campanias/vaciar/{id}', 'CampaniasController@actionBorrarPartici
 Route::get('/campanias/id/{campania_id}', 'CampaniasController@actionVerPorCampania');
 Route::post('/campanias/procesar', 'CampaniasController@actionProcesarArchivo');
 
+// Rutas para participantes
+Route::get('participantes', 'ParticipantesController@actionClicAcepta');
 
 // Para pruebas
-Route::get('/campanias/excel', 'CampaniasController@actionExcel');
 Route::get('/campanias/charts', 'CampaniasController@actionCharts');
+Route::get('/campanias/suma', 'CampaniasController@actionSuma');
 
 
-Route::get('participantes', 'ParticipantesController@actionClicAcepta');
