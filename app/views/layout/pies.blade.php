@@ -16,12 +16,11 @@
 {{ HTML::script('js/icheck-init.js') }}
 
 <!-- dynamic table -->
-<script type="text/javascript" language="javascript" src="js/advanced-datatable/js/jquery.dataTables.js"></script>
-<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
-<!--Español para dynamic table-->
+{{ HTML::script('js/advanced-datatable/js/jquery.dataTables.js') }}
+{{ HTML::script('js/data-tables/DT_bootstrap.js') }}
 
 <!--dynamic table initialization -->
-<script src="js/dynamic_table_init.js"></script>
+{{ HTML::script('js/dynamic_table_init.js') }}
 
 <!--Morris Chart-->
 {{ HTML::script('js/morris-chart/morris.js') }}

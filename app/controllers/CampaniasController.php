@@ -6,7 +6,7 @@ class CampaniasController extends \BaseController {
 	public function actionVerCampanias()
 	{	
 		// Tomamos todas las campañas
-		$campanias = Campania::all();
+		$campanias = Campania::orderBy('id', 'DESC')->get();
 		// Tomamos todos los participantes
 		$participantes = Participante::all();
 		// Capturamos sólo los que ya dieron clic

@@ -1,11 +1,16 @@
 function fnFormatDetails ( oTable, nTr )
 {
+    /*for(x=0; x<datosTablaParseados.length; x++) {
+        console.log(datosTablaParseados[x].id);
+        console.log(datosTablaParseados[x].nombre);
+        var limite = datosTablaParseados[x].limite;
+    }*/
     var aData = oTable.fnGetData( nTr );
-    var sOut = '<table cellpadding="4" cellspacing="0" border="0" style="padding-left:50px;">';
-    sOut += '<tr><td>Nombre de campaña:</td><td>'+aData[1]+' </td></tr>';
-    sOut += '<tr><td>Límite de ganadores:</td><td>'+aData[3]+'</td></tr>';
+    var sOut = '<table cellspacing="0" border="0" style="padding-left:50px;">';
+    sOut += '<tr><td>Nombre de campaña:</td><td>'+aData[1]+' </td><td> Gerencia:</td><td>'+aData[3]+' </td><td> Fecha de creación:</td><td>'+aData[2]+' </td></tr>';
+    sOut += '<tr><td>Límite de ganadores:</td><td>'+aData[4]+'</td><td>Participantes:</td><td>'+aData[5]+'</td></td><td>Ganadores hasta ahora:</td><td>'+aData[5]+'</td></tr>';
     sOut += '</table>';
-
+    
     return sOut;
 }
 
@@ -34,7 +39,6 @@ $(document).ready(function() {
         "aoColumnDefs": [
             { "bSortable": false, "aTargets": [ 0 ] }
         ],
-        "aaSorting": [[1, 'asc']],
     });
 
     /* Add event listener for opening and closing details

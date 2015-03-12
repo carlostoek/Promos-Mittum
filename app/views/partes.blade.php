@@ -11,3 +11,11 @@
       {{ Form::submit('Vaciar Campaña', array('class' => 'btn btn-warning')) }}
   {{ Form::close() }}
 </td>
+
+{{--Para escribir json--}}
+document.write(datosTabla[0].id);
+
+{{--Para recorrer json--}}
+for(i=0;i<datosTabla[0].length;i++){
+document.write(datosTabla[i]['id']);
+}

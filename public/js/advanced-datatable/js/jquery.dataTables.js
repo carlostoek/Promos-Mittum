@@ -9287,7 +9287,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Mostrando _START_ - _END_ de _TOTAL_ campañas",
+			"sInfo": "Mostrando _START_ - _END_ de _TOTAL_ registros",
 		
 		
 			/**
@@ -9306,7 +9306,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Mostrando 0 - 0 de 0 campañas",
+			"sInfoEmpty": "Mostrando 0 - 0 de 0 registros",
 		
 		
 			/**

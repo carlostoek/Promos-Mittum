@@ -4,6 +4,17 @@
 var data = JSON.parse('{{ $datos }}');
 var uno = data.valor1;
 var dos = data.valor2;
+
+// Pasamos datos Json
+/*var datosTabla = '{{ $campanias }}';
+console.log(datosTabla);*/
+ 
+//Lo parseamos para convertirlo en objeto
+/*var datosTablaParseados = JSON.parse(datosTabla);
+console.log(datosTablaParseados); */
+
+//Y lo recorremos
+
 </script>
   	<div class="page-heading">
     	<h3>Escritorio</h3>
@@ -110,9 +121,10 @@ var dos = data.valor2;
                   <thead>
                     <tr>
                       <th>Nombre</th>
-                      <th>Gerencia</th>
-                      <th>Límite de ganadores</th>
-                      <th>Participantes</th>
+                      <th>Fecha</th>
+                      <th style="display: none;">Gerencia</th>
+                      <th style="display: none;">Límite de ganadores</th>
+                      <th style="display: none;">Participantes</th>
                       <th>Editar</th>
                       <th>Estado</th>
                     </tr>
@@ -121,10 +133,11 @@ var dos = data.valor2;
                     @foreach ($campanias as $campania)
                     <tr>
                         <td><a href="{{ URL::to('campanias/id', $campania->id) }}">{{ $campania->nombre }}</a></td>
-                        <td>{{ $campania->gerencia }}</td>
+                        <td>{{ $campania->created_at }}</td>
+                        <td style="display: none;">{{ $campania->gerencia }}</td>
                         {{--Quiero mostrar acá los que ya hicieron click--}}
-                        <td>{{ $campania->limite }}</td>
-                        <td>{{ $campania->participante->count() }}</td>
+                        <td style="display: none;">{{ $campania->limite }}</td>
+                        <td style="display: none;">{{ $campania->participante->count() }}</td>
                         <td class="center">
                         <a href="{{ URL::to('campanias/editar', $campania->id) }}" class="btn btn-info btn-xs" title="Editar"><span class="fa fa-pencil"></span></a>
                         </td>
