@@ -29,6 +29,11 @@
   <!--dynamic table-->
   {{ HTML::style('js/advanced-datatable/css/table.css') }}
 
+  <!--Moments.js -->
+{{ HTML::script('js/moment-with-locales.min.js') }}
+{{ HTML::script('js/jquery-1.10.2.min.js') }}
+{{ HTML::script('js/jquery-ui-1.9.2.custom.min.js') }}
+
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>

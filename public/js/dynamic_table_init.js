@@ -7,7 +7,7 @@ function fnFormatDetails ( oTable, nTr )
     }*/
     var aData = oTable.fnGetData( nTr );
     var sOut = '<table cellspacing="0" border="0" style="padding-left:50px;">';
-    sOut += '<tr><td>Nombre de campaña:</td><td>'+aData[1]+' </td><td> Gerencia:</td><td>'+aData[3]+' </td><td> Fecha de creación:</td><td>'+aData[2]+' </td></tr>';
+    sOut += '<tr><td>Nombre de campaña:</td><td>'+aData[1]+' </td><td> Gerencia:</td><td>'+aData[3]+' </td><td> Fecha de creación:</td><td>'+  moment(aData[2]).format('LL')+' </td></tr>';
     sOut += '<tr><td>Límite de ganadores:</td><td>'+aData[4]+'</td><td>Participantes:</td><td>'+aData[5]+'</td></td><td>Ganadores hasta ahora:</td><td>'+aData[5]+'</td></tr>';
     sOut += '</table>';
     

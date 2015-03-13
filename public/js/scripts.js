@@ -167,11 +167,4 @@
 
     $('.popovers').popover();
 
-
-
-
-
-
-
-
 })(jQuery);
